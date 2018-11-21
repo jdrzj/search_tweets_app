@@ -1,0 +1,12 @@
+h3="Results for: #{params[:q]}"
+- unless tweets.empty?
+  ul
+    - tweets.each do |tweet|
+      li
+        i=sanitize(tweet[:text])
+        br
+        tt="author: @#{tweet[:user][:name]}, retweets 🔄: #{tweet[:favorite_count]}, likes 💗: #{tweet[:favorite_count]}"
+        br
+        br
+- else
+  p="No tweets for: #{params[:q]} 😢"

@@ -1,0 +1,4 @@
+- if result[:success]
+  = render partial: 'search/partials/tweets', locals: { tweets: result[:data] }
+- else
+  = result[:message]

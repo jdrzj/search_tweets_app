@@ -1,0 +1,8 @@
+= form_tag(root_path, method: 'get')
+  input name='q' type='text'
+  input type='submit' value='Submit'
+
+- unless @result.nil?
+  = render partial: 'search/partials/results', locals: { result: @result }
+- else
+  p To search tweets fill input above ☝️

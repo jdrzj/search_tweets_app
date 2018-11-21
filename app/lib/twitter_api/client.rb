@@ -1,6 +1,7 @@
 module TwitterApi
   class Client
     MAX_TWEETS = 20
+
     def search_tweets(query)
       search_results = twitter_client.search(query, count: MAX_TWEETS)
       searched_tweets = search_results.to_h[:statuses]
@@ -32,5 +33,6 @@ module TwitterApi
         config.consumer_secret = twitter_secrets[:api_secret_key]
       end
     end
+
   end
 end

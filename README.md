@@ -14,14 +14,7 @@ install gems:
 bundle install
 ```
 
-
-and add credentials:
-
-```
-EDITOR=vim bundle exec rails credentials:edit
-```
-
-There is an example of credentials in directory `config/credentials.yml.example`.
+_Just in case there is an example of credentials in directory `config/credentials.yml.example`._
 ## How to run tests?
 ```
 bundle exec rspec
